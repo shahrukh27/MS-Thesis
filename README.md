@@ -1,14 +1,14 @@
-# Application of GPD Approach for the P-Value Estimation of Modified Peptides
+# Application of GPD Approach for the *p*-Value Estimation of Modified Peptides
 
 ## Overview
 
 Database searching is the most popular approach for peptide identification from tandem mass spectrometry (MS/MS) data. Post-translational modifications alter the structural properties of proteins and add mass shifts in MS/MS spectra, thus hindering the peptide identification. Open database search programs allow search of hundreds of modifications resulting in high false positive rate and slower speed.
 
-To address above concerns in peptide identification, we explored the **application of generalised pareto distribution (GPD) for *p-value* estimation of modified peptides**. 
+To address above concerns in peptide identification, we explored **generalised pareto distribution (GPD) for *p*-value estimation of modified peptides**. 
 
-We followed the following pipeline for estimation of *p-values* using GPD approach:
+We followed the following pipeline for estimation of *p*-values using GPD approach:
 
-![alt_text](https://github.com/shahrukh27/MS-Thesis/blob/main/assets/analysis%20pipeline.png)
+![alt_text](https://github.com/shahrukh27/MS-Thesis/blob/main/assets/research%20pipeline.png)
 
 ## Data Collection
 
@@ -52,7 +52,7 @@ For each MS/MS, among the random database created against each top 5 picks per s
 
 Due to tool limitation, we could not run MSFragger on custom random database.
 
-## *p-value* Estimation
+## *p*-value Estimation
 
 Maximum Likelihood (ML) and Probability Weighted Moments (PWM) were used for parameter estimation and Projected Covariance Measure (PCM) and Parameter Estimation Anderson Darling (PAD) for goodness of fit test. We executed 12 GPD executions. We observed in this study as well as other studies in our group that GPD can be used for evaluating identified peptides (modified & unmodified) through database search. Based on our findings, we recommend using PWM for parameter estimation, PCM for goodness of fit.  
 

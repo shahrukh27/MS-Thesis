@@ -2,7 +2,6 @@
 
 [![Project Masters thesis](https://img.shields.io/badge/Project-Masters_thesis-8062AB)](#overview)
 [![Domain Proteomics](https://img.shields.io/badge/Domain-Proteomics-137D87)](#data)
-[![Data Tandem Mass Spectrometry](https://img.shields.io/badge/Data-Tandem_Mass_Spectrometry-purple)](#gpd)
 [![Method Generalized Pareto](https://img.shields.io/badge/Method-Generalized_Pareto-3876BB)](#gpd)
 
 
@@ -15,7 +14,7 @@ To address above concerns in peptide identification, we explored **generalised p
 We followed the following pipeline for estimation of *p*-values using GPD approach:
 
 ![alt_text](assets/research%20pipeline.png)
-
+<a id="data"></a>
 ## Data Collection
 
 The dataset collection consisted of two components:
@@ -60,7 +59,7 @@ For each MS/MS, among the random database created against each top 5 picks per s
 ## Database Searching II
 
 Due to tool limitation, we could not run MSFragger on custom random database.
-
+<a id="gpd"></a>
 ## *p*-value Estimation
 
 Maximum Likelihood (ML) and Probability Weighted Moments (PWM) were used for parameter estimation and Projected Covariance Measure (PCM) and Parameter Estimation Anderson Darling (PAD) for goodness of fit test. We executed 12 GPD executions. We observed in this study as well as other studies in our group that GPD can be used for evaluating identified peptides (modified & unmodified) through database search. Based on our findings, we recommend using PWM for parameter estimation, PCM for goodness of fit.  

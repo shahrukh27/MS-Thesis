@@ -1,5 +1,11 @@
 # Application of GPD Approach for the *p*-Value Estimation of Modified Peptides
 
+[![Project Masters thesis](https://img.shields.io/badge/Project-Masters_thesis-8062AB)](#overview)
+[![Domain Proteomics](https://img.shields.io/badge/Domain-Proteomics-137D87)](#data)
+[![Data Tandem Mass Spectrometry](https://img.shields.io/badge/Data-Tandem_Mass_Spectrometry-purple)](#gpd)
+[![Method Generalized Pareto](https://img.shields.io/badge/Method-Generalized_Pareto-3876BB)](#gpd)
+
+
 ## Overview
 
 Database searching is the most popular approach for peptide identification from tandem mass spectrometry (MS/MS) data. Post-translational modifications alter the structural properties of proteins and add mass shifts in MS/MS spectra, thus hindering the peptide identification. Open database search programs allow search of hundreds of modifications resulting in high false positive rate and slower speed.
@@ -8,19 +14,17 @@ To address above concerns in peptide identification, we explored **generalised p
 
 We followed the following pipeline for estimation of *p*-values using GPD approach:
 
-![alt_text](https://github.com/shahrukh27/MS-Thesis/blob/main/assets/research%20pipeline.png)
+![alt_text](assets/research%20pipeline.png)
 
 ## Data Collection
 
 The dataset collection consisted of two components:
 
 * **Input Spectra:** PXD009449 MS/MS dataset was downloaded from the PRoteomics IDEntifications Database (PRIDE).
-  
-![alt_text](https://github.com/shahrukh27/MS-Thesis/blob/main/assets/MSMS%20Data.png)
+  [Dataset Details](assets/MSMS%20Data.png)
 
 * **Target Database:** Human protein sequences were downloaded from UniProtKB database (release # 2022_05; https://www.uniprot.org/proteomes/UP000005640) on Dec 19th, 2022, using Accession ID: UP000005640.
-  
-![alt_text](https://github.com/shahrukh27/MS-Thesis/blob/main/assets/protein%20database.png)
+  [Target Database Detals](assets/protein%20database.png)
 
 ## Data Cleanup
 
@@ -29,13 +33,18 @@ We ended up with a total of 78K MS/MS spectra.
 
 ## Database Searching I
 
-MSFragger was used for peptide sequencing and identification and localization of PTMs in 78K input MS/MS spectra. Out of 78K spectra, **70% **had a peptide match in top 5 database hits per spectra, and **58%** had an exact match at the first rank of database hits. Out of the first rank hits, only **29K** had correct PTM identification (excluding spectrum of unmodified peptide) and localization, and an additional **11K** correct hits of unmodified peptides. 
+MSFragger was used for peptide sequencing and identification and localization of PTMs in 78K input MS/MS spectra.  
 
-MSFragger results were summarised on these three criteria: peptide identification (PEP), PTM identification (PTM), PTM localisation (PTM LOC). Summarised results are given below:
+| Outcome | Result stated in the original summary |
+| :---: | :---: |
+| Peptide match among the top five hits | Approximately 70% of the processed spectra |
+| Exact peptide match at rank one | Approximately 58% of the processed spectra |
+| Rank-one modified-peptide hits with correct PTM identity and localization | Approximately 29,000 |
+| Additional correct rank-one unmodified-peptide hits | Approximately 11,000 |
 
-![alt_text](https://github.com/shahrukh27/MS-Thesis/blob/main/assets/MSFragger%20Results%20Summary.png)
+MSFragger results were summarised on these three criteria: peptide identification (PEP), PTM identification (PTM), PTM localisation (PTM LOC). In C0, database hits meet all three criteria i.e., correct peptide identification, correct PTM identification and correct PTM localization (PEP + PTM + PTM LOC). In C1, none of the three criteria are met (- PEP - PTM - PTM LOC) and so on. Only C0 were considered true positives.
 
-In C0, database hits meet all three criteria i.e., correct peptide identification, correct PTM identification and correct PTM localization (PEP + PTM + PTM LOC). In C1, none of the three criteria are met (- PEP - PTM - PTM LOC) and so on. Only C0 were considered true positives.
+[Summarized Results](assets/MSFragger%20Results%20Summary.png)
 
 ## Database Creation
 

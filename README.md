@@ -1,9 +1,11 @@
+<div align="center">
+
 # Application of GPD Approach for the *p*-Value Estimation of Modified Peptides
 
 [![Project Masters thesis](https://img.shields.io/badge/Project-Masters_thesis-8062AB)](#overview)
 [![Domain Proteomics](https://img.shields.io/badge/Domain-Proteomics-137D87)](#data)
 [![Method Generalized Pareto](https://img.shields.io/badge/Method-Generalized_Pareto-3876BB)](#gpd)
-
+</div>
 
 ## :clipboard: Overview
 

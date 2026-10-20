@@ -27,8 +27,7 @@ The dataset collection consisted of two components:
 
 ## Data Cleanup
 
-Peptide and MS/MS Spectra cleaning of PXD009449 dataset is mentioned in detail here: https://github.com/shahrukh27/PXD009449 
-We ended up with a total of 78K MS/MS spectra. 
+Peptide and MS/MS Spectra cleaning of PXD009449 dataset is mentioned in detail here: https://github.com/shahrukh27/PXD009449. We ended up with a total of 78K MS/MS spectra. 
 
 ## Database Searching I
 
@@ -41,7 +40,18 @@ MSFragger was used for peptide sequencing and identification and localization of
 | Rank-one modified-peptide hits with correct PTM identity and localization | Approximately 29,000 |
 | Additional correct rank-one unmodified-peptide hits | Approximately 11,000 |
 
-MSFragger results were summarised on these three criteria: peptide identification (PEP), PTM identification (PTM), PTM localisation (PTM LOC). In C0, database hits meet all three criteria i.e., correct peptide identification, correct PTM identification and correct PTM localization (PEP + PTM + PTM LOC). In C1, none of the three criteria are met (- PEP - PTM - PTM LOC) and so on. Only C0 were considered true positives.
+MSFragger results were summarised on these three criteria: peptide identification (PEP), PTM identification (PTM), PTM localisation (PTM LOC). Only **C0** were considered true positives.
+
+| Category | Peptide identity | PTM identity | PTM location |
+| :---: | :---: | :---: | :---: |
+| C0 | Correct | Correct | Correct |
+| C1 | Incorrect | Incorrect | Incorrect |
+| C2 | Incorrect | Incorrect | Correct |
+| C3 | Incorrect | Correct | Correct |
+| C4 | Correct | Incorrect | Incorrect |
+| C5 | Correct | Correct | Incorrect |
+| C6 | Incorrect | Correct | Incorrect |
+| C7 | Correct | Incorrect | Correct |
 
 [Summarized Results](assets/MSFragger%20Results%20Summary.png)
 

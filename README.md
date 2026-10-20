@@ -62,7 +62,12 @@ Due to tool limitation, we could not run MSFragger on custom random database.
 <a id="gpd"></a>
 ## *p*-value Estimation
 
-Maximum Likelihood (ML) and Probability Weighted Moments (PWM) were used for parameter estimation and Projected Covariance Measure (PCM) and Parameter Estimation Anderson Darling (PAD) for goodness of fit test. We executed 12 GPD executions. We observed in this study as well as other studies in our group that GPD can be used for evaluating identified peptides (modified & unmodified) through database search. Based on our findings, we recommend using PWM for parameter estimation, PCM for goodness of fit.  
+| Role | Methods reported on the original page |
+| :---: | :---: |
+| Parameter estimation | Maximum Likelihood (ML); Probability Weighted Moments (PWM) |
+| Goodness-of-fit assessment | Projected Covariance Measure (PCM); Parameter Estimation Anderson Darling (PAD) |
+| Number of GPD runs | 12 |
+| Recommendation reported by the project | PWM for parameter estimation and PCM for goodness-of-fit assessment |
 
 ## Updates
 

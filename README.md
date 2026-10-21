@@ -83,5 +83,6 @@ Due to tool limitation, we could not run MSFragger on custom random database.
 
 ## :placard: Updates
 
-This research work is continued in my current research work Research Assistant, along with exploration of other database search tools. Results are not mentioned in detail here and will be published later. 
+This work is being continued as part of my current Research Assistant role, alongside the exploration of other database search tools. Detailed results are not included here, as they will be published separately at a later stage. 
 
+**University:** COMSATS University Islamabad, Islamabad.
